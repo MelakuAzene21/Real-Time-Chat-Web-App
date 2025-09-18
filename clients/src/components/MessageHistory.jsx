@@ -1,16 +1,21 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useSelector } from 'react-redux'
-import ScrollableFeed from "react-scrollable-feed"
 import { isSameSender, isSameSenderMargin, isSameUser, isLastMessage } from '../utils/logics'
 import { Tooltip } from "@chakra-ui/tooltip";
 import { Avatar } from "@chakra-ui/avatar";
 import "../pages/home.css"
 function MessageHistory({ messages }) {
   const activeUser = useSelector((state) => state.activeUser)
+  const containerRef = useRef(null)
+
+  useEffect(() => {
+    if (!containerRef.current) return
+    containerRef.current.scrollTop = containerRef.current.scrollHeight
+  }, [messages])
 
   return (
     <>
-      <ScrollableFeed className='scrollbar-hide'>
+      <div ref={containerRef} className='scrollbar-hide overflow-y-auto h-full'>
         {messages &&
           messages.map((m, i) => (
 
@@ -48,8 +53,7 @@ function MessageHistory({ messages }) {
             </div>
           ))
         }
-
-      </ScrollableFeed >
+      </div>
     </>
   )
 }
