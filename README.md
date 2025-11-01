@@ -247,7 +247,7 @@ This project is licensed under the ISC License - see the [License.md](License.md
 
 ## 👨‍💻 Author
 
-**Shakir Farhan**
+**Melaku Azene**
 
 ## 🙏 Acknowledgments
 
@@ -259,7 +259,7 @@ This project is licensed under the ISC License - see the [License.md](License.md
 ## 📧 Contact & Support
 
 For issues, questions, or suggestions:
-- Open an issue on [GitHub Issues](https://github.com/ShakirFarhan/Realtime-Chat/issues)
+- Open an issue on [GitHub Issues](https://github.com/MelakuAzene21/Realtime-Chat/issues)
 - Contact the maintainer
 
 ## 🚧 Roadmap
